@@ -1,9 +1,9 @@
 <div align="center">
-<a href="https://victoreke.com"><img src="./public/logo.png" width="60px"></a>
+<a href="https://arnau.dev"><img src="./public/logo.png" width="60px"></a>
 </div>
 
 <div align="center">
-<h1>victoreke.com</h1>
+<h1>arnau.dev</h1>
 <p>My personal portfolio website</p>
 </div>
 
@@ -31,9 +31,9 @@ Follow this guide to get this site runnning locally:
 ### Clone Repository
 
 ```js
-git clone https://github.com/Evavic44/victoreke.com.git
+git clone https://github.com/Evavic44/arnau.dev.git
 
-cd victoreke.com
+cd arnau.dev
 
 npm install
 ```
@@ -121,13 +121,13 @@ npm run build
 [planetscale]: https://planetscale.com/
 [nexttheme]: https://github.com/pacocoursey/next-themes
 [reactrefractor]: https://github.com/rexxars/react-refractor
-[site]: https://victoreke.com
-[studio]: https://victoreke.com/studio
-[studio-preview]: https://github.com/Evavic44/victoreke.com/assets/62628408/a2574479-a352-4437-ba67-14bd976e48eb
-[site-preview]: https://github.com/Evavic44/victoreke.com/assets/62628408/e84ac72f-1ba1-4c46-bfc0-2512ffa0e5fa
+[site]: https://arnau.dev
+[studio]: https://arnau.dev/studio
+[studio-preview]: https://github.com/Evavic44/arnau.dev/assets/62628408/a2574479-a352-4437-ba67-14bd976e48eb
+[site-preview]: https://github.com/Evavic44/arnau.dev/assets/62628408/e84ac72f-1ba1-4c46-bfc0-2512ffa0e5fa
 [env-example]: ./env.example
 [localhost]: http://localhost:3000
 [localhost-studio]: http://localhost:3000/studio
-[env-api]: https://github.com/Evavic44/victoreke.com/blob/d526d77b3902d6339dd3eee9e95c27b7b55f3ca9/lib/env.api.ts#L13-L16C3
+[env-api]: https://github.com/Evavic44/arnau.dev/blob/d526d77b3902d6339dd3eee9e95c27b7b55f3ca9/lib/env.api.ts#L13-L16C3
 [sanity-manage]: https://sanity.io/manage
 [sanity-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs
