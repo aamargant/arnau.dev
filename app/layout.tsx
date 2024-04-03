@@ -62,9 +62,10 @@ export default function RootLayout({
       </body>
       <Script
         async
-        src="https://statsarnau.vercel.app/script.js"
+        src="https://arnau-dev.vercel.app/script.js"
         data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ""}
       />
+      <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="138e131e-e0cd-4268-a0e7-dc65eb8e1242"></script>
     </html>
   );
 }
