@@ -17,7 +17,7 @@ const inter = Inter({
 const options = {
   title: "Arnau Amargant | Software Developer",
   description:
-    "Arnau Amargant is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
+    "Arnau Amargant is a DevOps who is passionate about building solutions and contributing to open source communities",
   url: "https://arnau.dev",
   ogImage:
     "https://res.cloudinary.com/arnau/image/upload/v1692635746/arnau/og.png",

@@ -2,19 +2,22 @@ import { Slide } from "../animation/Slide";
 import Image from "next/image";
 import { Metadata } from "next";
 import PageHeading from "@/app/components/shared/PageHeading";
+import img1 from "../pic1.jpg"
+import img2 from "../pic2.jpg"
+import img3 from "../pic3.jpg"
 
 const images = [
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1585618256754-241cfe4e8113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=100",
+    src: img1,
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1585619203238-70e7631cc672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    src: img2,
   },
   {
     id: "3",
-    src: "https://images.unsplash.com/photo-1585619443911-c2bb23fb2a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    src: img3,
   },
 ];
 
@@ -44,7 +47,7 @@ export default function Photos() {
             <Image
               key={image.id}
               src={image.src}
-              alt="playing guitar"
+              alt="Snowy mountains"
               width={350}
               height={800}
               className="dark:bg-primary-bg bg-secondary-bg"
