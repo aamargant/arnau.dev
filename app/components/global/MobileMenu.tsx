@@ -26,11 +26,6 @@ export default function MobileMenu() {
       icon: HiBeaker,
     },
     {
-      title: "Blog",
-      href: "/blog",
-      icon: HiBookmarkAlt,
-    },
-    {
       title: "Photos",
       href: "/photos",
       icon: HiCamera,
