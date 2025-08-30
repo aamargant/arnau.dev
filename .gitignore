@@ -37,3 +37,4 @@ yarn-error.log*
 backup.json
 backup.ndjson
 .aider*
+.mcp.json
