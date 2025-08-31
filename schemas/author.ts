@@ -11,7 +11,6 @@ export default defineType({
       name: "name",
       title: "Author Name",
       type: "string",
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "photo",
@@ -29,14 +28,12 @@ export default defineType({
       options: {
         hotspot: true,
         metadata: ["lqip"],
-      },
-      validation: (rule) => rule.required(),
+      }
     }),
     defineField({
       name: "twitterUrl",
       title: "Twitter URL",
-      type: "url",
-      validation: (rule) => rule.required(),
+      type: "url"
     }),
   ],
 });
