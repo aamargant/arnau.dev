@@ -53,8 +53,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       images:
-        urlFor(post.coverImage?.image).width(1200).height(630).url() ||
-        fallbackImage,
+        post.coverImage?.image 
+          ? urlFor(post.coverImage.image).width(1200).height(630).url()
+          : fallbackImage,
       url: `https://arnau.dev/blog/${post.slug}`,
       title: post.title,
       description: post.description,
@@ -69,10 +70,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       images:
-        urlFor(post.coverImage?.image).width(680).height(340).url() ||
-        fallbackImage,
-      creator: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
-      site: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
+        post.coverImage?.image 
+          ? urlFor(post.coverImage.image).width(680).height(340).url()
+          : fallbackImage,
+      creator: post.author.twitterUrl ? `@${post.author.twitterUrl.split("twitter.com/")[1]}` : undefined,
+      site: post.author.twitterUrl ? `@${post.author.twitterUrl.split("twitter.com/")[1]}` : undefined,
       card: "summary_large_image",
     },
   };
@@ -86,7 +88,7 @@ export default async function Post({ params }: Props) {
     qParams: { slug },
   });
 
-  const words = toPlainText(post.body);
+  const words = post.body ? toPlainText(post.body) : '';
 
   if (!post) {
     notFound();
@@ -134,19 +136,7 @@ export default async function Post({ params }: Props) {
 
             <PageHeading title={post.title} description={post.description} />
 
-            <div className="relative w-full h-40 pt-[52.5%]">
-              <Image
-                className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
-                layout="fill"
-                src={post.coverImage?.image || fallbackImage}
-                alt={post.coverImage?.alt || post.title}
-                quality={100}
-                placeholder={post.coverImage?.lqip ? `blur` : "empty"}
-                blurDataURL={post.coverImage?.lqip || ""}
-              />
-            </div>
-
-            <div className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed tracking-tight text-lg">
+            <div className="mt-8 dark:text-white text-zinc-900 leading-relaxed tracking-tight text-lg">
               <PortableText value={post.body} components={CustomPortableText} />
             </div>
           </div>
@@ -157,29 +147,33 @@ export default async function Post({ params }: Props) {
                 Written By
               </p>
               <address className="flex items-center gap-x-3 mt-4 not-italic">
-                <div className="relative w-12 h-12">
-                  <Image
-                    src={urlFor(post.author.photo.image)
-                      .width(80)
-                      .height(80)
-                      .url()}
-                    alt={post.author.photo.alt}
-                    layout="fill"
-                    className="dark:bg-zinc-800 bg-zinc-300 rounded-full object-cover"
-                  />
-                </div>
+                {post.author.photo?.image && (
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={urlFor(post.author.photo.image)
+                        .width(80)
+                        .height(80)
+                        .url()}
+                      alt={post.author.photo.alt || post.author.name}
+                      layout="fill"
+                      className="dark:bg-zinc-800 bg-zinc-300 rounded-full object-cover"
+                    />
+                  </div>
+                )}
                 <div rel="author">
                   <h3 className="font-semibold text-lg tracking-tight">
                     {post.author.name}
                   </h3>
-                  <a
-                    href={post.author.twitterUrl}
-                    className="text-blue-500 text-sm"
-                    rel="noreferrer noopener"
-                    target="_blank"
-                  >
-                    {`@${post.author.twitterUrl.split("twitter.com/")[1]}`}
-                  </a>
+                  {post.author.twitterUrl && (
+                    <a
+                      href={post.author.twitterUrl}
+                      className="text-blue-500 text-sm"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      {`@${post.author.twitterUrl.split("twitter.com/")[1]}`}
+                    </a>
+                  )}
                 </div>
               </address>
             </section>

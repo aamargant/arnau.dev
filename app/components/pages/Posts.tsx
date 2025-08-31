@@ -61,7 +61,7 @@ export default async function Posts() {
                       <div className="flex items-center gap-x-2">
                         <BiSolidTime />
                         <div className="">
-                          {readTime(toPlainText(post.body))}
+                          {post.body ? readTime(toPlainText(post.body)) : '0 min read'}
                         </div>
                       </div>
                     </div>
