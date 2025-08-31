@@ -75,7 +75,7 @@ export const CustomPortableText: PortableTextComponents = {
       </em>
     ),
     strong: ({ children }) => (
-      <strong className="font-bold dark:text-zinc-300 text-zinc-700">
+      <strong className="font-bold dark:text-white text-zinc-900">
         {children}
       </strong>
     ),
