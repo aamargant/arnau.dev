@@ -7,6 +7,7 @@ import {
   HiBeaker,
   HiBookmarkAlt,
   HiCamera,
+  HiHome,
   HiOutlineX,
   HiUser,
 } from "react-icons/hi";
@@ -15,6 +16,11 @@ import Logo from "../../../public/logo.png";
 export default function MobileMenu() {
   const [navShow, setNavShow] = useState(false);
   const data = [
+    {
+      title: "Home",
+      href: "/",
+      icon: HiHome,
+    },
     {
       title: "About",
       href: "/about",
