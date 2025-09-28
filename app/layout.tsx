@@ -2,6 +2,7 @@ import "@/app/styles/globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { incognito } from "./font/font";
 import { gitlabmono } from "./font/font";
 import Navbar from "./components/global/Navbar";
@@ -59,6 +60,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Analytics />
         <Script
           async
           src="https://cloud.umami.is/script.js"
