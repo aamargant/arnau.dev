@@ -61,7 +61,7 @@ export default function RootLayout({
         </Providers>
         <Script
           async
-          src="https://analytics.eu.umami.is/script.js"
+          src="https://cloud.umami.is/script.js"
           data-website-id="138e131e-e0cd-4268-a0e7-dc65eb8e1242"
         />
       </body>
