@@ -32,7 +32,7 @@ export default defineType({
       rows: 4,
       validation: (Rule) => [
         Rule.required()
-          .min(100)
+          .min(50)
           .error("A description of min 100 characters is required"),
       ],
     }),

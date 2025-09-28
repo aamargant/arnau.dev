@@ -6,6 +6,7 @@ import {
   BiLogoGitlab,
   BiLogoInstagram,
   BiLogoLinkedinSquare,
+  BiLogoSpotify,
   BiLogoStackOverflow,
   BiLogoSteam,
   BiLogoUnsplash,
@@ -49,6 +50,13 @@ export const socialLinks = [
     name: "Instagram",
     url: "https://www.instagram.com/arnauamargantd",
     icon: BiLogoInstagram,
+    status: "social",
+  },
+  {
+    id: 6,
+    name: "Spotify",
+    url: "https://open.spotify.com/user/arnau21?si=c20580dfeb3347a6",
+    icon: BiLogoSpotify,
     status: "social",
   }
 ];
