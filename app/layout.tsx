@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 const options = {
-  title: "Arnau Amargant | Software Developer",
+  title: "Arnau Amargant | DevOps Engineer",
   description:
     "Arnau Amargant is a DevOps who is passionate about building solutions and contributing to open source communities",
   url: "https://arnau.dev",
