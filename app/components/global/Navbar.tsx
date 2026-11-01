@@ -20,10 +20,6 @@ export default function Navbar() {
       href: "/projects",
     },
     {
-      title: "Automation",
-      href: "/automation",
-    },
-    {
       title: "Blog",
       href: "/blog",
     },
