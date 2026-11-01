@@ -7,6 +7,9 @@
     "build": "next lint && next build",
     "start": "next start"
   },
+  "engines": {
+    "node": "26.x"
+  },
   "dependencies": {
     "@giscus/react": "^2.3.0",
     "@sanity/client": "^6.7.0",
