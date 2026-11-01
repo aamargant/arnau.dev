@@ -7,6 +7,7 @@ import {
   HiBeaker,
   HiBookmarkAlt,
   HiCamera,
+  HiCog,
   HiHome,
   HiOutlineX,
   HiUser,
@@ -31,11 +32,16 @@ export default function MobileMenu() {
       href: "/projects",
       icon: HiBeaker,
     },
-    // {
-    //   title: "Blog",
-    //   href: "/blog",
-    //   icon: HiBookmarkAlt,
-    // },
+    {
+      title: "Automation",
+      href: "/automation",
+      icon: HiCog,
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+      icon: HiBookmarkAlt,
+    },
     {
       title: "Photos",
       href: "/photos",
